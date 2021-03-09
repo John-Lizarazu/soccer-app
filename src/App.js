@@ -16,15 +16,14 @@ componentDidMount(){
   render() {
     return(
       <div className="main-container">
-      
         {this.state.soccerVideos.map((soccerVideo)=>(
         <div className="card-container">
           <a href = {soccerVideo.url} target="_blank" rel="noreferrer">
             <img 
             src={soccerVideo.thumbnail} 
             alt="pic"
-            height="150"
-            width="150"/>
+            height="200"
+            width="200"/>
           </a><br/>
           <p>{soccerVideo.title}</p>
         </div>)
