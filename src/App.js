@@ -14,9 +14,24 @@ componentDidMount(){
   .then((data)=>this.setState({soccerVideos:data}))
 }
   render() {
-    return (
-      <div></div>
-    )
+    return(
+      <div className="main-container">
+      
+        {this.state.soccerVideos.map((soccerVideo)=>(
+        <div className="card-container">
+          <a href = {soccerVideo.url} target="_blank" rel="noreferrer">
+            <img 
+            src={soccerVideo.thumbnail} 
+            alt="pic"
+            height="150"
+            width="150"/>
+          </a><br/>
+          <p>{soccerVideo.title}</p>
+        </div>)
+        )})
+      </div>
+    );
+
   }
 }
 export default App
