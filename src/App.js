@@ -35,7 +35,7 @@ componentDidMount(){
             height="200"
             width="250"/>
           </a><br/>
-          <p>{soccerVideo.title}</p>
+          <p className='title'>{soccerVideo.title}</p>
         </div>)
         )})
       </div>
